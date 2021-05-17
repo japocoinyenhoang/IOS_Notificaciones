@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UserNotifications  //libreria peticion de permisos de notificaciones, y se implementa en el didFinishLaunchingWithOptions ()
+
 
 class ViewController: UIViewController {
 
@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var txtDescripcion: UITextField!
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
