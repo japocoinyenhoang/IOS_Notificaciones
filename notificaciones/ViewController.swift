@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     func enviarNotificacion() {
         //1. Crear el triger de la notificacion
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10.0, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 6.0, repeats: false)
         
         //2. Crear el contenido de la notificacion
         let notificacion = UNMutableNotificationContent ()
@@ -41,6 +41,10 @@ class ViewController: UIViewController {
         //3. Creamos un request
         let request = UNNotificationRequest(identifier: "notificacion basica", content: notificacion, trigger: trigger)
         
+        //declaramos un delegado
+        UNUserNotificationCenter.current().delegate = self
+        
+        
         //4. Añadimos el request al centro de notificaciones
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
@@ -51,4 +55,15 @@ class ViewController: UIViewController {
         }
     }
 }
+
+extension ViewController: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        completionHandler([.badge, .sound])
+        
+    }
+    
+}
+
 
