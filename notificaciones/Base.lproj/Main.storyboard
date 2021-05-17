@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="notificaciones" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Co-Fd-0AY">
+                                <rect key="frame" x="20" y="76" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lGR-re-NpV">
+                                <rect key="frame" x="20" y="142" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6o-Cy-SVK">
+                                <rect key="frame" x="20" y="208" width="374" height="30"/>
+                                <state key="normal" title="ENVIAR NOTIFICACION"/>
+                                <connections>
+                                    <action selector="enviarNotificacionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcr-ot-5OK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lGR-re-NpV" secondAttribute="trailing" constant="20" id="3cy-ce-HZa"/>
+                            <constraint firstItem="1Co-Fd-0AY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="44Q-cN-kVB"/>
+                            <constraint firstItem="1Co-Fd-0AY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="6Tf-T4-mno"/>
+                            <constraint firstItem="lGR-re-NpV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7xB-SH-euH"/>
+                            <constraint firstItem="s6o-Cy-SVK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HXa-IQ-9Wa"/>
+                            <constraint firstItem="s6o-Cy-SVK" firstAttribute="top" secondItem="lGR-re-NpV" secondAttribute="bottom" constant="32" id="JvY-Pe-Yeh"/>
+                            <constraint firstItem="lGR-re-NpV" firstAttribute="top" secondItem="1Co-Fd-0AY" secondAttribute="bottom" constant="32" id="kFi-S1-HyH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Co-Fd-0AY" secondAttribute="trailing" constant="20" id="kvb-0T-305"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s6o-Cy-SVK" secondAttribute="trailing" constant="20" id="lBa-yw-f5I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtDescripcion" destination="lGR-re-NpV" id="bX4-zD-z1w"/>
+                        <outlet property="txtTitulo" destination="1Co-Fd-0AY" id="vxz-Qv-F64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
